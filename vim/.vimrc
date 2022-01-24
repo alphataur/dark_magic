@@ -84,6 +84,10 @@ else
 endif
 
 
+"conjure clojure
+" Plug 'Olical/conjure'
+
+
 "iamfiasco coc autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -92,6 +96,22 @@ Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'frazrepo/vim-rainbow'
 
+" svelte
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+" pugjs
+Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
+
+
+"vim fugitive
+Plug 'tpope/vim-fugitive'
+
+" tagbar
+Plug 'majutsushi/tagbar'
+
+
+" vim emmet
+Plug 'mattn/emmet-vim'
 
 " Support bundles
 Plug 'jgdavey/tslime.vim'
@@ -123,7 +143,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 
 " Allow pane movement to jump out of vim into tmux
 Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'kchmck/vim-coffee-script'
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
@@ -444,6 +464,18 @@ map <leader>ss :setlocal spell!<cr>
 
 " }}}
 
+" nikhil brightness exit
+function! Brightnessexit()
+  exec "silent !xrandr --output HDMI-0 --gamma 1:1:1 --brightness 0.3"
+  return 0
+endfunction
+
+"nikhil brightness on
+function! Brightnesson()
+  exec  "silent !xrandr --output HDMI-0 --gamma 1:1:1 --brightness 1"
+  return 0
+endfunction
+
 " Helper functions {{{
 
 function! CmdLine(str)
@@ -577,14 +609,38 @@ endif
 "Nikhil Surya Mukhi
 let g:coc_node_path = "/usr/bin/node"
 nnoremap <C-c> :w !xsel -b<CR>
-nnoremap <C-p> :NERDTreeToggle<CR>
+nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <C-L> :CocComman python.setInterpreter<CR>
+nnoremap <C-R> :w gl read 99 <CR>
+nnoremap <C-A> :vert resize 30<CR>
+nnoremap <C-S> :vert resize 200<CR>
 let g:coc_global_extensions = ['coc-conjure']
 set directory^=$HOME/.vim/swap//
-
+nmap <C-H> :nohlsearch <CR>
+nmap <C-T> :vert term <CR>
+nmap <C-X> :vert term python <CR>
 "rainbow brackets load
 let g:rainbow_active = 1
 
 
+autocmd FileType python call tagbar#autoopen(0)
 " MarkDown Mappings
 nmap <C-m> <Plug>MarkdownPreviewToggle
+
+" auto make view
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
+
+
+" custom tabs
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
