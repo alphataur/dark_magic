@@ -6,4 +6,5 @@ This repository contains my personal config files; nothing more nothing less.
 - Vim
 - fish shell
 - hyper terminal
+- i3 tiling manager
 
