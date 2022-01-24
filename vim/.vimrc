@@ -1,3 +1,6 @@
+" Nikhil Surya Mukhi <iamfiasco> 2022
+
+
 " HVN paths {{{
 " Set XDG_CONFIG_HOME/haskell-vim-now to load user's config files
 if exists($XDG_CONFIG_HOME)

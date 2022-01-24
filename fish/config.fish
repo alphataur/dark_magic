@@ -1,3 +1,5 @@
+# Nikhil Surya Mukhi <iamfiasco> 2022
+
 alias fishrc="vim ~/.config/fish/config.fish"
 alias l="ls -lh"
 alias sourceFish="source ~/.config/fish/config.fish"
