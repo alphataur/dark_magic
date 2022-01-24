@@ -27,7 +27,7 @@ def move_i3():
     os.system("cp -r /home/iamfiasco/.config/i3status/config i3/i3status/")
 
 def move_fish():
-    os.makedirs("hyper", exist_ok=True)
+    os.makedirs("fish", exist_ok=True)
     os.system("cp /home/iamfiasco/.config/fish/config.fish fish/")
 
 if __name__ == "__main__":
