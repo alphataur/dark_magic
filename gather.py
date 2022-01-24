@@ -29,3 +29,9 @@ def move_i3():
 def move_fish():
     os.makedirs("hyper", exist_ok=True)
     os.system("cp /home/iamfiasco/.config/fish/config.fish fish/")
+
+if __name__ == "__main__":
+    move_vimrc()
+    move_hyperc()
+    move_i3()
+    move_fish()
