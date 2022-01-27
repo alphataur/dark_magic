@@ -188,5 +188,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        status_command exec /home/iamfiasco/.config/i3status/nspeed.sh
         font pango:DejaVu Sans Mono 10
 }

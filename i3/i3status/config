@@ -63,6 +63,11 @@ battery 1 {
         low_threshold = 10
 }
 
+#nspeed {
+#  status_command exec /home/iamfiasco/.config/i3status/nspeed.sh
+#}
+
+
 tztime local {
 		format = "<span background='#841B2D'> %time </span>"
 		format_time = " %a %-d %b %H:%M"

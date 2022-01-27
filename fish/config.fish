@@ -35,7 +35,7 @@ alias freelancer="cd /home/iamfiasco/Downloads/secured/nov/dead/"
 alias paste="xsel -b > $1"
 alias ytdlp="yt-dlp -N 4 -f bestvideo+bestaudio $1"
 alias setHeadphones="pactl set-sink-port 0 analog-output-headphones"
-
+alias killPattern="ps aux | grep $argv[1] | awk \'{print $2}\' | xargs kill -9"
 function javarun
   javac $argv[1] -d /home/iamfiasco/javabin/temp.class && java /home/iamfiasco/javabin/temp
 end
