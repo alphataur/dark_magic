@@ -100,14 +100,21 @@ Plug 'iamcco/markdown-preview.vim'
 Plug 'frazrepo/vim-rainbow'
 
 " svelte
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
+"Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'evanleck/vim-svelte'
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'othree/yajs.vim'
 
 " pugjs
-Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
+"Plug 'digitaltoad/vim-pug'
 
 
 "vim fugitive
 Plug 'tpope/vim-fugitive'
+
+"pugjs config :se filetype=pug
+Plug 'digitaltoad/vim-pug'
 
 " tagbar
 Plug 'majutsushi/tagbar'
@@ -615,8 +622,8 @@ nnoremap <C-c> :w !xsel -b<CR>
 nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <C-L> :CocComman python.setInterpreter<CR>
 nnoremap <C-R> :w gl read 99 <CR>
-nnoremap <C-A> :vert resize 30<CR>
-nnoremap <C-S> :vert resize 200<CR>
+nnoremap <C-S> :vert resize 30<CR>
+nnoremap <C-A> :vert resize 200<CR>
 let g:coc_global_extensions = ['coc-conjure']
 set directory^=$HOME/.vim/swap//
 nmap <C-H> :nohlsearch <CR>
