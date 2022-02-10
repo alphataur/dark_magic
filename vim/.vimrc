@@ -619,7 +619,8 @@ endif
 "Nikhil Surya Mukhi
 let g:coc_node_path = "/usr/bin/node"
 nnoremap <C-c> :w !xsel -b<CR>
-nnoremap <C-N> :NERDTreeToggle<CR>
+" no nerdtree is not safe for health
+"nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <C-L> :CocComman python.setInterpreter<CR>
 nnoremap <C-R> :w gl read 99 <CR>
 nnoremap <C-S> :vert resize 30<CR>
