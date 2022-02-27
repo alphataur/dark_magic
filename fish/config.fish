@@ -27,6 +27,8 @@ alias open="xdg-open"
 alias nodeAsyncRepl="node --experimental-repl-await"
 alias clearl="clear && ls -ll"
 alias chromep='/usr/bin/google-chrome-stable %U --proxy-server="socks5://localhost:9050"'
+
+# for color inversion for xrandr visit https://github.com/zoltanp/xrandr-invert-colors
 alias invertColors="/usr/local/bin/xrandr-invert-colors"
 alias startwork="cd /home/iamfiasco/Desktop/nov/dead/"
 alias lhrt="ls -lhrt"

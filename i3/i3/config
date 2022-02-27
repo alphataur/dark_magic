@@ -50,6 +50,10 @@ floating_modifier $mod
 #alacritty terminal
 bindsym $mod+Return exec tabbed /snap/bin/alacritty --embed
 
+#invert colors nikhil
+#https://github.com/zoltanp/xrandr-invert-colors
+bindsym $mod+i exec /usr/local/bin/xrandr-invert-colors
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
